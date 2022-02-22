@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:20 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/21 20:14:38 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/02/22 20:26:47 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	t_list	stack_a;
+	t_stack	*stack_a;
 
 	if (argc == NOPARAMETER)
 		return (1);
@@ -22,11 +22,12 @@ int	main(int argc, char **argv)
 		return (error());
 	stack_a = malloc(argc - 1 * sizeof(int));
 	save_stack(&argv[1], stack_a);
+	solve_puzzle(stack_a);
 	free (stack_a);
 }
 
 int	error(void)
 {
-	write(2, "Error", 5);
+	write(2, "Error\n", 6);
 	return (1);
 }
