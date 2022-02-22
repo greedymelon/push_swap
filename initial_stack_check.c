@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/22 20:43:03 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/02/22 21:04:59 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	is_valid_input(char **stack)
 {
 	if (!is_all_digit(stack))
 		return (0);
-	if (duplicate(stack))
+	if (is_duplicate(stack))
 		return (0);
 	if (!is_all_integer(stack))
 		return (0);

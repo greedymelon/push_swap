@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/15 15:06:19 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/21 19:33:34 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/02/22 21:03:58 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,5 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int			ft_printf(const char *str, ...);
 long int	ft_atoi_long(const char *str);
-char		*get_next_line(int fd);
+
 #endif

@@ -7,14 +7,17 @@ RM = rm -f
 NAME = push_swap
 
 FILES = push_swap.c \
-initial_stack_check.c
+initial_stack_check.c \
+stack_saving_freeing.c \
+raw_stack_movement.c \
+stack_managing.c
 
 OBJ = ${FILES:%.c=%.o}
 
 all : ${NAME}
 
 ${NAME} : libft.a ${OBJ}
-	@${CC} ${CFLAGS} ./libft/libft.a ${OBJ} -o ${NAME}
+	@${CC} ${CFLAGS} ${OBJ} ./libft/libft.a -o ${NAME}
 
 ${OBJ} : ${FILES}
 	@${CC} ${CFLAGS} push_swap.h -c ${FILES} 

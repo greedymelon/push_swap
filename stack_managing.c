@@ -13,32 +13,33 @@ t_stack	*stacknew(int number)
 	return (new_element);
 }
 
-void	stackadd_back(t_stack **stack, t_stack *element)
+void	stackadd_bottom(t_stack **stack, t_stack *element)
 {
 	if (*stack == NULL)
 		*stack = element;
 	else
 	{
-        if (*stack == element && stack->next != NULL )
+        if (*stack == element && (*stack)->next != NULL )
         {   
-            *stack = stack->next;
+            *stack = (*stack)->next;
             element->next = NULL;
         }
 		if (*stack != element)
-			stacklast(*stack) = element;
+			stacklast(*stack)->next = element;
 	}
-  
-void	stackadd_front(t_stack **stack, t_stack *element)
-{
-	element->next = *stack;
-	*stack = element;
 }
+  
+// void	stackadd_top(t_stack **stack, t_stack *element)
+// {
+// 	element->next = *stack;
+// 	*stack = element;
+// }
 
-t_stack	*stacklast(t_list *stack)
+t_stack	*stacklast(t_stack *stack)
 {
 	if (stack == NULL)
 		return (stack);
 	while (stack->next != NULL)
-		stack = lst->next;
+		stack = stack->next;
 	return (stack);
 }

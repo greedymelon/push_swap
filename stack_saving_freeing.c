@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	save_stack(char **stack, t_stack **stack_a);
+int	save_stack(char **stack, t_stack **stack_a)
 {
     t_stack *new_element;
     int     i;
@@ -8,14 +8,15 @@ int	save_stack(char **stack, t_stack **stack_a);
     i = 0;
     while (stack[i])
     {
-        new_element = stacknew(ft_atoi(stack[i]))
+        new_element = stacknew(ft_atoi(stack[i]));
         if (new_element == NULL)
             return (2);
-		stackadd_back(stack_a, new_element);
+		stackadd_bottom(stack_a, new_element);
     }
+	return (0);
 }
 
-void    free_stack(t_stack **stack)
+void	free_stack(t_stack **stack)
 {
     t_stack	*place_holder;
 	t_stack	*index;
@@ -33,5 +34,6 @@ void    free_stack(t_stack **stack)
 				place_holder = index;
 			}
 		}
-		*lst = NULL;
+		*stack = NULL;
+	}
 }
