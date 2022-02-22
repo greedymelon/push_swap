@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	int	*stack_a;
+	t_list	stack_a;
 
 	if (argc == NOPARAMETER)
 		return (1);
