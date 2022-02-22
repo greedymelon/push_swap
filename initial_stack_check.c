@@ -88,15 +88,3 @@ static int	all_intiger(char **stack)
 	}
 	return (1);
 }
-
-void	save_stack(char **stack, int *stack_a)
-{
-	int	i;
-
-	i = 0;
-	while (stack[i])
-	{
-		stack_a[i] = ft_atoi(stack[i]);
-		i++;
-	}
-}
