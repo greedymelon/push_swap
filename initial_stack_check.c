@@ -6,28 +6,28 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/22 18:09:44 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/02/22 20:43:03 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	all_digit(char **stack);
-static int	no_duplicate(char **stack);
-static int	all_intiger(char **stack);
+static int	is_all_digit(char **stack);
+static int	is_duplicate(char **stack);
+static int	is_all_integer(char **stack);
 
 int	is_valid_input(char **stack)
 {
-	if (!all_digit(stack))
+	if (!is_all_digit(stack))
 		return (0);
-	if (!no_duplicate(stack))
+	if (duplicate(stack))
 		return (0);
-	if (!all_intiger(stack))
+	if (!is_all_integer(stack))
 		return (0);
 	return (1);
 }
 
-static int	all_digit(char **stack)
+static int	is_all_digit(char **stack)
 {
 	int	i;
 	int	j;
@@ -50,7 +50,7 @@ static int	all_digit(char **stack)
 	return (1);
 }
 
-static int	no_duplicate(char **stack)
+static int	is_duplicate(char **stack)
 {
 	int	i;
 	int	j;
@@ -62,16 +62,16 @@ static int	no_duplicate(char **stack)
 		while (stack[j + i])
 		{
 			if (!ft_strncmp(stack[i], stack[j + i], 11))
-				return (0);
+				return (1);
 			j++;
 		}
 		j = 1;
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-static int	all_intiger(char **stack)
+static int	is_all_integer(char **stack)
 {
 	int			i;
 	long int	num;
@@ -82,7 +82,7 @@ static int	all_intiger(char **stack)
 		if (ft_strlen(stack[i]) > 11)
 			return (0);
 		num = ft_atoi_long(stack[i]);
-		if (num > INT_MAX|| num < INT_MIN)
+		if (num > INT_MAX || num < INT_MIN)
 			return (0);
 		i++;
 	}
