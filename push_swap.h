@@ -21,6 +21,11 @@ typedef enum e_parameter{
 	FALSE = 0,
 }	t_paramiter;
 
+typedef struct s_stack{
+	int		number;
+	struct s_stack	next;
+}	t_stack;
+
 int		is_valid_input(char **stack);
 int		error(void);
 void	save_stack(char **stack, int *stack_a);
