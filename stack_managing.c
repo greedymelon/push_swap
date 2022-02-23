@@ -1,6 +1,5 @@
 #include "push_swap.h"
 
-
 t_stack	*stacknew(int number)
 {
 	t_stack	*new_element;
@@ -19,21 +18,21 @@ void	stackadd_bottom(t_stack **stack, t_stack *element)
 		*stack = element;
 	else
 	{
-        if (*stack == element && (*stack)->next != NULL )
-        {   
-            *stack = (*stack)->next;
-            element->next = NULL;
-        }
+		if (*stack == element && (*stack)->next != NULL )
+		{
+			*stack = (*stack)->next;
+			element->next = NULL;
+		}
 		if (*stack != element)
 			stacklast(*stack)->next = element;
 	}
 }
   
-// void	stackadd_top(t_stack **stack, t_stack *element)
-// {
-// 	element->next = *stack;
-// 	*stack = element;
-// }
+void	stackadd_top(t_stack **stack, t_stack *element)
+{
+	element->next = *stack;
+	*stack = element;
+}
 
 t_stack	*stacklast(t_stack *stack)
 {
