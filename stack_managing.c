@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   stack_managing.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/02/25 13:28:11 by dmonfrin      #+#    #+#                 */
+/*   Updated: 2022/02/25 13:28:13 by dmonfrin      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*stacknew(int number)
@@ -27,7 +39,7 @@ void	stackadd_bottom(t_stack **stack, t_stack *element)
 			stacklast(*stack)->next = element;
 	}
 }
-  
+
 void	stackadd_top(t_stack **stack, t_stack *element)
 {
 	element->next = *stack;

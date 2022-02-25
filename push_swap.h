@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/22 21:24:19 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/02/25 13:26:33 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef enum e_parameter{
 
 typedef struct s_stack{
 	int		number;
-	struct s_stack	*next;
+	s_stack	*next;
 }	t_stack;
 
 int		is_valid_input(char **stack);

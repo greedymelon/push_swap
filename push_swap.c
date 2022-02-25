@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:20 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/23 12:50:49 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/02/25 13:25:47 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	main(int argc, char **argv)
 	if (!is_valid_input(&argv[1]))
 		return (error());
 	if (save_stack(&argv[1], &stack_a))
-		return(error());
-	//solve_puzzle(stack_a);
+		return (error());
+	solve_puzzle(stack_a);
 	free_stack(&stack_a);
 	return (0);
 }

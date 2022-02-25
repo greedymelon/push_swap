@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   raw_stack_movement.c                               :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/02/25 13:27:42 by dmonfrin      #+#    #+#                 */
+/*   Updated: 2022/02/25 13:27:48 by dmonfrin      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*push(t_stack **stack_sender, t_stack **stack_target)
