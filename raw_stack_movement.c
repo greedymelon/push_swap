@@ -17,18 +17,35 @@ void	push(t_stack **stack_sender, t_stack **stack_target)
 	t_stack	*first_element;
 
 	first_element = *stack_sender;
-	(*stack_sender) = (*stack_sender)->next;
+	if ((*stack_sender)->next ==  NULL)
+		(*stack_sender) == NULL;
+	else
+		(*stack_sender) = (*stack_sender)->next;
 	stackadd_top(stack_target, first_element);
 }
-
+//check the logit
 void	rotate(t_stack **stack)
 {
-	stackadd_bottom(stack, *stack);
+	t_stack	*first_element;
+
+	first_element = *stack;
+	(*stack) = (*stack)->next;
+	first_element->next = NULL;
+	
 }
+ 
 
 void	rv_rotate(t_stack **stack)
 {
-	stackadd_top(stack, stacklast(*stack));
+	t_stack	*first_element;
+	t_stack	*last_element;
+
+	last_element = stacklast(*stack);
+	last_element->next = (*stack)->next;
+	first_element = *stack;
+	(*stack) = last_element;
+	first_element->next = NULL;
+	stack_penultimate(*stack)->next = first_element;
 }
 
 void	swap(t_stack **stack)
