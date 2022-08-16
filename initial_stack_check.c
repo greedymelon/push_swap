@@ -6,85 +6,70 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/22 21:04:59 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/08/15 12:19:30 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_all_digit(char **stack);
-static int	is_duplicate(char **stack);
-static int	is_all_integer(char **stack);
+static int	is_all_digit(const char *stack);
+static int	is_all_integer(const char *stack);
 
-int	is_valid_input(char **stack)
+int	is_valid_input(const char *stack)
 {
 	if (!is_all_digit(stack))
+	{
 		return (0);
-	if (is_duplicate(stack))
-		return (0);
+	}
 	if (!is_all_integer(stack))
 		return (0);
 	return (1);
 }
 
-static int	is_all_digit(char **stack)
+static int	is_all_digit(const char *stack)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
+	if (stack[i] == '-' && stack[i])
+		i++;
 	while (stack[i])
 	{
-		if (stack[i][j] == '-' && stack[i][j + 1])
-			j++;
-		while (stack[i][j])
-		{
-			if (!ft_isdigit(stack[i][j]))
-				return (0);
-			j++;
-		}
-		j = 0;
+		if (!ft_isdigit(stack[i]))
+			return (0);
 		i++;
 	}
 	return (1);
 }
 
-static int	is_duplicate(char **stack)
+static int	is_all_integer(const char *stack)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 1;
-	while (stack[i])
-	{
-		while (stack[j + i])
-		{
-			if (!ft_strncmp(stack[i], stack[j + i], 11))
-				return (1);
-			j++;
-		}
-		j = 1;
-		i++;
-	}
-	return (0);
-}
-
-static int	is_all_integer(char **stack)
-{
-	int			i;
 	long int	num;
 
-	i = 0;
-	while (stack[i])
+	if (ft_strlen(stack) > 11)
+		return (0);
+	num = ft_atoi_long(stack);
+	if (num > INT_MAX || num < INT_MIN)
+		return (0);
+	return (1);
+}
+
+int	is_duplicate(t_stack *a)
+{
+	t_stack	*place_holder;
+
+	if (!a || !a->next)
+		return (0);
+	while (a && a->next)
 	{
-		if (ft_strlen(stack[i]) > 11)
-			return (0);
-		num = ft_atoi_long(stack[i]);
-		if (num > INT_MAX || num < INT_MIN)
-			return (0);
-		i++;
+		place_holder = a->next;
+		while (place_holder)
+		{	
+			if (a->number == place_holder->number)
+				return (0);
+			place_holder = place_holder->next;
+		}
+		a = a->next;
 	}
 	return (1);
 }

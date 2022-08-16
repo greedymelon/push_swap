@@ -12,12 +12,12 @@
 
 #include "push_swap.h"
 
-t_stack	*push(t_stack **stack_sender, t_stack **stack_target)
+void	push(t_stack **stack_sender, t_stack **stack_target)
 {
 	t_stack	*first_element;
 
 	first_element = *stack_sender;
-	*stack_sender = (*stack_sender)->next;
+	(*stack_sender) = (*stack_sender)->next;
 	stackadd_top(stack_target, first_element);
 }
 
@@ -38,5 +38,5 @@ void	swap(t_stack **stack)
 	place_holder = *stack;
 	*stack = (*stack)->next;
 	place_holder->next = (*stack)->next;
-	stack->next = place_holder;
+	(*stack)->next = place_holder;
 }

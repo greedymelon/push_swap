@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/15 15:03:13 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2021/12/15 15:10:04 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/15 11:52:12 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ int	ft_uintlen(unsigned int n)
 	}
 	return (count);
 }
+
+size_t	ft_strslen(const char **s)
+{
+	size_t	count;
+
+	count = 0;
+	while (s[count])
+		count++;
+	return (count);
+}
+

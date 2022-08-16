@@ -4,6 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
+LIB_PATH = ./libft/libft.a
+
 NAME = push_swap
 
 FILES = push_swap.c \
@@ -16,12 +18,12 @@ OBJ = ${FILES:%.c=%.o}
 
 all : ${NAME}
 
-${NAME} : libft.a ${OBJ}
-	@${CC} ${CFLAGS} ${OBJ} ./libft/libft.a -o ${NAME}
+${NAME} : ${LIB_PATH} ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} ${LIB_PATH} -o ${NAME}
 
 ${OBJ} : ${FILES}
-	@${CC} ${CFLAGS} push_swap.h -c ${FILES} 
-libft.a :
+	${CC} ${CFLAGS} -c ${FILES} 
+${LIB_PATH} :
 	make -C ./libft
 
 re :	fclean all

@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/15 15:06:19 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/02/22 21:03:58 by anonymous     ########   odam.nl         */
+/*   Updated: 2022/08/15 11:54:56 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void		*ft_calloc(size_t count, size_t size);
 char		*ft_strdup(const char *s1);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
+size_t		ft_strslen(const char **s);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
@@ -59,7 +60,7 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putunbr_fd(unsigned int n, int fd);
-void		**ft_free_mem(char **str_of_str, int count);
+void		**ft_free_mem(const char **str_of_str, int count);
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);

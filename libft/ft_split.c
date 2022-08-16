@@ -6,14 +6,14 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/15 14:59:01 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2021/12/15 14:59:04 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/15 11:54:29 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	**ft_free_mem(char **str_of_str, int count)
+void	**ft_free_mem(const char **str_of_str, int count)
 {
 	int	i;
 
