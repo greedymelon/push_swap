@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/15 12:20:34 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/16 18:31:38 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int		error(void);
 int		check_saving(const char **stack, t_stack **stack_a);
 void	free_stack(t_stack *stack);
 t_stack	*stacklast(t_stack *stack);
+t_stack	*stack_penultimate(t_stack *stack);
 void	stackadd_top(t_stack **stack, t_stack *element);
 void	stackadd_bottom(t_stack **stack, t_stack *element);
 t_stack	*stacknew(int number);

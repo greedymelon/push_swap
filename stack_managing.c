@@ -54,3 +54,12 @@ t_stack	*stacklast(t_stack *stack)
 		stack = stack->next;
 	return (stack);
 }
+
+t_stack	*stack_penultimate(t_stack *stack)
+{
+	if (stack == NULL)
+		return (stack);
+	while (stack->next != NULL && stack->next->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
