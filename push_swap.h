@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/17 14:27:23 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/17 15:36:47 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	rotate(t_stack **stack);
 void	swap(t_stack **stack);
 void	compute_move(int move, t_stack **a, t_stack **b);
 void	print_move(int move);
+int		stack_count(t_stack *stack);
 
 
 
