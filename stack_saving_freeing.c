@@ -29,7 +29,9 @@ int	is_string_of_string(const char *stack)
 int	str_of_str(const char *stack, t_stack **stack_a)
 {	
 	int			i;
-	const char	**divided_stack = (const char **)ft_split(stack, ' ');
+	char	**divided_stack; 
+	
+	divided_stack = ft_split(stack, ' ');
 
 	if (!divided_stack)
 		return (0);

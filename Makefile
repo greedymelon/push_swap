@@ -12,7 +12,8 @@ FILES = push_swap.c \
 initial_stack_check.c \
 stack_saving_freeing.c \
 raw_stack_movement.c \
-stack_managing.c
+stack_managing.c \
+test_move.c
 
 OBJ = ${FILES:%.c=%.o}
 

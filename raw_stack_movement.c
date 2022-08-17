@@ -14,6 +14,7 @@
 
 void	compute_move(int move, t_stack **a, t_stack **b)
 {
+	print_move(move);
 	if (move == sa || move == ss)
 		swap(a);
 	if (move == sb || move == ss)
@@ -36,9 +37,11 @@ void	push(t_stack **stack_sender, t_stack **stack_target)
 {
 	t_stack	*first_element;
 
+	if (!*stack_sender)
+		return ;
 	first_element = *stack_sender;
 	if ((*stack_sender)->next == NULL)
-		(*stack_sender) == NULL;
+		*stack_sender = NULL;
 	else
 		(*stack_sender) = (*stack_sender)->next;
 	stackadd_top(stack_target, first_element);
@@ -48,29 +51,33 @@ void	rotate(t_stack **stack)
 {
 	t_stack	*first_element;
 
+	if (!*stack || !(*stack)->next)
+		return ;
 	first_element = *stack;
 	(*stack) = (*stack)->next;
 	first_element->next = NULL;
-	stackadd_end(stack, first_element);
+	stackadd_bottom(stack, first_element);
 }
 
 void	rv_rotate(t_stack **stack)
 {
-	t_stack	*first_element;
+
 	t_stack	*last_element;
 
+	if (!*stack || !(*stack)->next)
+		return ;
 	last_element = stacklast(*stack);
-	last_element->next = (*stack)->next;
-	first_element = *stack;
-	(*stack) = last_element;
-	first_element->next = NULL;
-	stack_penultimate(*stack)->next = first_element;
+	stack_penultimate(*stack)->next = NULL;
+	last_element->next = (*stack);
+	*stack = last_element;
 }
 
 void	swap(t_stack **stack)
 {
 	t_stack	*place_holder;
 
+	if (!*stack)
+		return ;
 	place_holder = *stack;
 	*stack = (*stack)->next;
 	place_holder->next = (*stack)->next;
