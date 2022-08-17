@@ -48,7 +48,6 @@ int	str_of_str(const char *stack, t_stack **stack_a)
 	return (1);
 }
 
-// i have tor write a function that is able to work with string and string f strin and is readable
 int	check_saving(const char **stack, t_stack **stack_a)
 {
 	int	i;

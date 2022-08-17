@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/15 12:19:30 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/17 10:48:22 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ static int	is_all_integer(const char *stack);
 int	is_valid_input(const char *stack)
 {
 	if (!is_all_digit(stack))
-	{
 		return (0);
-	}
 	if (!is_all_integer(stack))
 		return (0);
 	return (1);

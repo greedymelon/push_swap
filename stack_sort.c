@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/25 13:31:49 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/15 12:24:15 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/17 11:30:21 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,32 +34,4 @@ int solve_puzzle (t_stack **a, int stack_element)
 	if (stack_element < 500)
 	{}
 	return(1);
-}
-
-void print_and_move(t_stack *stack_a, t_stack *stack_b, char *move)
-{
-	ft_printf ("%s\n", move);
-}
-
-
-void print_and_move(t_stack **a, t_stack **b)
-{
-	if (**a && (*a)->next && ((*a)->number < (*a)->next->number))
-	{
-		if (**b && (*b)->next && ((*b)->number > (*b)->next->number))
-			compute_move(ss);
-		else
-			compute_move(sa);		
-	}
-	if (**b && (*b)->next && ((*b)->number > (*b)->next->number))
-		compute_move(sb);
-	if (**a && (*a)->next) && ((*a)->number > stacklast(*a)->number))
-	{
-		if (**b && (*b)->next && ((*b)->number < stacklast(*b)->number))
-			compute_move(rr);
-		else
-			compute_move(ra);		
-	}
-	if (**b && (*b)->next && ((*b)->number < stacklast(*b)->number))
-		compute_move(rrb);
 }
