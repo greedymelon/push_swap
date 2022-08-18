@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:20 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/17 15:32:19 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/18 11:53:49 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void print_stack(t_stack *a)
 {	
-	if (!a)
-		return ;
-	while(a->next)
+	while(a)
 	{
-		ft_printf("%d", a->number);
+		ft_printf("*%d", a->num);
 		a = a->next;
 	}
-	ft_printf("%d", a->number);
+	ft_printf("\n");
 }
 
 int	main(int argc,const char **argv)
@@ -37,9 +35,10 @@ int	main(int argc,const char **argv)
 		return (error());
 	}
 	//
-	test_move(&a);
+	//test_move(&a);
+	solve_puzzle(&a, stack_count(a));
 	print_stack (a);
-	solve_puzzle(&a, stackcount(a));
+	
 	free_stack(a);
 	return (0);
 }

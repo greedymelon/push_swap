@@ -82,6 +82,7 @@ void	swap(t_stack **stack)
 	*stack = (*stack)->next;
 	place_holder->next = (*stack)->next;
 	(*stack)->next = place_holder;
+	
 }
 
 void	print_move(int move)

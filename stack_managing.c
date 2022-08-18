@@ -12,14 +12,14 @@
 
 #include "push_swap.h"
 
-t_stack	*stacknew(int number)
+t_stack	*stacknew(int num)
 {
 	t_stack	*new_element;
 
 	new_element = malloc(sizeof(t_stack));
 	if (new_element == NULL)
 		return (NULL);
-	new_element->number = number;
+	new_element->num = num;
 	new_element->next = NULL;
 	return (new_element);
 }
@@ -74,5 +74,5 @@ int	stack_count(t_stack *stack)
 		stack = stack->next;
 		count++;
 	}
-	return (stack);
+	return (count);
 }

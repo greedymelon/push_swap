@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/17 10:48:22 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/18 10:03:43 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	is_duplicate(t_stack *a)
 		place_holder = a->next;
 		while (place_holder)
 		{	
-			if (a->number == place_holder->number)
+			if (a->num == place_holder->num)
 				return (0);
 			place_holder = place_holder->next;
 		}

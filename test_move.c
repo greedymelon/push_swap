@@ -16,5 +16,4 @@ void	test_move (t_stack **a)
 		compute_move(i, a, &b);
 		i++;
 	}
-
 }
