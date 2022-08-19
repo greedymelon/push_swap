@@ -1,7 +1,6 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/dmonfrin/Desktop/project/in_progress/push_swap_github'
 make -C ./libft
- 
 gcc -Wall -Wextra -Werror -c push_swap.c initial_stack_check.c stack_saving_freeing.c raw_stack_movement.c stack_managing.c test_move.c stack_sort.c stack_ordering.c stack_algoritm.c 
 gcc -Wall -Wextra -Werror -c push_swap.c initial_stack_check.c stack_saving_freeing.c raw_stack_movement.c stack_managing.c test_move.c stack_sort.c stack_ordering.c stack_algoritm.c 
 gcc -Wall -Wextra -Werror -c push_swap.c initial_stack_check.c stack_saving_freeing.c raw_stack_movement.c stack_managing.c test_move.c stack_sort.c stack_ordering.c stack_algoritm.c 

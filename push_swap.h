@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/19 13:33:50 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/19 14:23:04 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ void	swap(t_stack **stack);
 void	compute_move(int move, t_stack **a, t_stack **b);
 void	print_move(int move);
 int		stack_count(t_stack *stack);
-void	solve_puzzle (t_stack **a, int numb_element);
+void	solve_puzzle(t_stack **a, int numb_element);
 void	assign_index(t_stack *a);
 void	radix(t_stack **a, t_stack **b);
-void set_index(t_stack *a);
+void	set_index(t_stack *a);
 
 
 

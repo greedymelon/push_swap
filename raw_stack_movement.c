@@ -61,7 +61,6 @@ void	rotate(t_stack **stack)
 
 void	rv_rotate(t_stack **stack)
 {
-
 	t_stack	*last_element;
 
 	if (!*stack || !(*stack)->next)
@@ -82,7 +81,6 @@ void	swap(t_stack **stack)
 	*stack = (*stack)->next;
 	place_holder->next = (*stack)->next;
 	(*stack)->next = place_holder;
-	
 }
 
 void	print_move(int move)
@@ -91,7 +89,7 @@ void	print_move(int move)
 		ft_printf("sa\n");
 	if (move == sb)
 		ft_printf("sb\n");
-	if (move== ss)
+	if (move == ss)
 		ft_printf("ss\n");
 	if (move == pa)
 		ft_printf("pa\n");

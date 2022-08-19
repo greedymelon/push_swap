@@ -10,7 +10,7 @@ void print_idx(t_stack *a)
 	ft_printf("\n");
 }
 
-void set_index(t_stack *a)
+void	set_index(t_stack *a)
 {
 	while (a)
 	{
@@ -19,7 +19,7 @@ void set_index(t_stack *a)
 	}
 }
 
-t_stack *min_int(t_stack *a)
+t_stack	*min_int(t_stack *a)
 {
 	t_stack	*min;
 
