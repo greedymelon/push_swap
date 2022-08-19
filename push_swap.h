@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/18 11:32:41 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/19 13:33:50 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef enum e_parameter{
 
 typedef struct s_stack{
 	int				num;
+	int				idx;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -54,11 +55,14 @@ void	compute_move(int move, t_stack **a, t_stack **b);
 void	print_move(int move);
 int		stack_count(t_stack *stack);
 void	solve_puzzle (t_stack **a, int numb_element);
-
+void	assign_index(t_stack *a);
+void	radix(t_stack **a, t_stack **b);
+void set_index(t_stack *a);
 
 
 
 
 void	test_move (t_stack **a);
 void print_stack(t_stack *a);
+void print_idx(t_stack *a);
 #endif

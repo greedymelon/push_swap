@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/25 13:31:49 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/18 14:44:52 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/19 13:14:55 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ void	solve_puzzle(t_stack **a, int numb_element)
 		three_algo(a, &b);
 	if (numb_element <= 5)
 		five_algo(a, &b);
-	// if (numb_element > 5)
-	// 	undred_algo(a, &b);
+	if (numb_element > 5)
+		radix(a, &b);
 	free_stack(b);
 }
