@@ -54,7 +54,8 @@ ft_printf/ft_printf.c \
 ft_printf/ft_printf_bon_flag.c \
 ft_printf/ft_printf_utility.c \
 ft_printf/ft_printf_sort.c \
-ft_printf/ft_printf_print_utility.c
+ft_printf/ft_printf_print_utility.c \
+get_next_line/get_next_line.c
 
 OBJ = ${FILES:%.c=%.o}
 

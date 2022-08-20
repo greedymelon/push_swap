@@ -8,6 +8,8 @@ LIB_PATH = ./libft/libft.a
 
 NAME = push_swap
 
+BON_NAME = checker
+
 FILES = push_swap.c \
 initial_stack_check.c \
 stack_saving_freeing.c \
@@ -20,6 +22,14 @@ radix_comp.c \
 stack_mv_print.c
 
 OBJ = ${FILES:%.c=%.o}
+
+BON_FILES = checker.c \
+checker_check.c \
+checker_input.c \
+checker_move.c \
+checker_stack_creation.c
+
+BON_OBJ = ${BON_FILES:%.c=%.o}
 
 all : ${NAME}
 
@@ -34,10 +44,17 @@ ${LIB_PATH} :
 re :	fclean all
 
 clean :
-	@${RM} ${OBJ}; make fclean -C ./libft
+	@${RM} ${OBJ} ${BON_OBJ}; make fclean -C ./libft
 
+bonus : ${BON_NAME}
+
+${BON_NAME} : ${LIB_PATH} ${BON_OBJ}
+	${CC} ${CFLAGS} ${BON_OBJ} ${LIB_PATH} -o ${BON_NAME}
+
+${BON_OBJ} : ${BON_FILES}
+	${CC} ${CFLAGS} -c ${BON_FILES} 
 
 fclean : clean
-	@${RM} ${NAME} 
+	@${RM} ${NAME} ${BON_NAME}
 
 .PHONY: all clean fclean bonus re
