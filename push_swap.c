@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:20 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/19 14:22:28 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 10:38:12 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(int argc, const char **argv)
 	//
 	//test_move(&a);
 	solve_puzzle(&a, stack_count(a));
-	print_stack (a);
+	//print_stack (a);
 	free_stack(a);
 	return (0);
 }
