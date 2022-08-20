@@ -13,10 +13,11 @@ initial_stack_check.c \
 stack_saving_freeing.c \
 raw_stack_movement.c \
 stack_managing.c \
-test_move.c	\
-stack_sort.c \
+stack_sort_small.c \
 stack_ordering.c \
-stack_algoritm.c
+stack_algoritm.c \
+radix_comp.c \
+stack_mv_print.c
 
 OBJ = ${FILES:%.c=%.o}
 

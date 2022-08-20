@@ -29,10 +29,9 @@ int	is_string_of_string(const char *stack)
 int	str_of_str(const char *stack, t_stack **stack_a)
 {	
 	int		i;
-	char	**divided_stack; 
+	char	**divided_stack;
 
 	divided_stack = ft_split(stack, ' ');
-
 	if (!divided_stack)
 		return (0);
 	i = 0;
@@ -72,7 +71,6 @@ int	check_saving(const char **stack, t_stack **stack_a)
 	}
 	if (!is_duplicate(*stack_a))
 		return (0);
-	ft_printf("allright\n");
 	return (1);
 }
 

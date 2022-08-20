@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:19:38 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/19 14:23:04 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 12:29:31 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,14 @@ void	solve_puzzle(t_stack **a, int numb_element);
 void	assign_index(t_stack *a);
 void	radix(t_stack **a, t_stack **b);
 void	set_index(t_stack *a);
+void	move_ahead_a_push(int *n_move, int *store_m, t_stack **a, t_stack **b);
+void	move_ahead_b_push(int *n_move, int *store_m, t_stack **a, t_stack **b);
+void	move_back_a(int *n_move, t_stack **a, t_stack **b);
+void	move_back_a(int *n_move, t_stack **a, t_stack **b);
+void	compute_move(int move, t_stack **a, t_stack **b);
+void	print_move(int move);
+int		is_ascending(t_stack *a);
+void	five_algo(t_stack **a, t_stack **b);
+void	three_algo(t_stack **a, t_stack **b);
 
-
-
-
-void	test_move (t_stack **a);
-void print_stack(t_stack *a);
-void print_idx(t_stack *a);
 #endif

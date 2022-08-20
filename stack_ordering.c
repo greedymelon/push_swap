@@ -1,14 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   stack_ordering.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/08/20 12:34:01 by dmonfrin      #+#    #+#                 */
+/*   Updated: 2022/08/20 12:34:03 by dmonfrin      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-void print_idx(t_stack *a)
-{	
-	while(a)
-	{
-		ft_printf("%d ", a->idx);
-		a = a->next;
-	}
-	ft_printf("\n");
-}
+#include "push_swap.h"
 
 void	set_index(t_stack *a)
 {

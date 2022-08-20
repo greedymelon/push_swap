@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   stack_sort.c                                       :+:    :+:            */
+/*   stack_sort_small.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/25 13:31:49 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/19 13:14:55 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 12:34:34 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	is_ascending(t_stack *a)
-{
-	while (a->next)
-	{
-		if (a->num > a->next->num)
-			return (0);
-		a = a->next;
-	}
-	return (1);
-}
 
 void	three_algo(t_stack **a, t_stack **b)
 {
@@ -105,22 +94,4 @@ void	five_algo(t_stack **a, t_stack **b)
 	compute_move(pa, a, b);
 	if (*b)
 		compute_move(pa, a, b);
-}
-
-void	solve_puzzle(t_stack **a, int numb_element)
-{
-	t_stack	*b;
-
-	b = NULL;
-	if (is_ascending(*a))
-		return ;
-	if (numb_element == 2)
-		compute_move(sa, a, &b);
-	if (numb_element == 3)
-		three_algo(a, &b);
-	if (numb_element <= 5)
-		five_algo(a, &b);
-	if (numb_element > 5)
-		radix(a, &b);
-	free_stack(b);
 }

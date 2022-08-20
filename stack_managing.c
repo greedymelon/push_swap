@@ -61,18 +61,5 @@ t_stack	*stack_penultimate(t_stack *stack)
 		return (stack);
 	while (stack->next != NULL && stack->next->next != NULL)
 		stack = stack->next;
-	
 	return (stack);
-}
-int	stack_count(t_stack *stack)
-{
-	int	count;
-
-	count = 0;
-	while (stack)
-	{	
-		stack = stack->next;
-		count++;
-	}
-	return (count);
 }

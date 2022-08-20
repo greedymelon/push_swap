@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/21 18:18:15 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/18 10:03:43 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 11:59:10 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static int	is_all_integer(const char *stack);
 int	is_valid_input(const char *stack)
 {
 	if (!is_all_digit(stack))
-		return (0);
+		return (error());
 	if (!is_all_integer(stack))
-		return (0);
+		return (error());
 	return (1);
 }
 
@@ -64,7 +64,7 @@ int	is_duplicate(t_stack *a)
 		while (place_holder)
 		{	
 			if (a->num == place_holder->num)
-				return (0);
+				return (error());
 			place_holder = place_holder->next;
 		}
 		a = a->next;
