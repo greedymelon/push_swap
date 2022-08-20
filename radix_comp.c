@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/20 12:32:59 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/20 12:33:06 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 12:39:43 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	move_ahead_a_push(int *n_move, int *store_m, t_stack **a, t_stack **b)
 	while (*n_move)
 	{
 		compute_move(ra, a, b);
-		*n_move--;
-		*store_m++;
+		(*n_move)--;
+		(*store_m)++;
 	}
 	compute_move(pb, a, b);
 }
 
-void	move_back_a(int *n_move, t_stack **a, t_stack **b)
+void	move_back_a(int n_move, t_stack **a, t_stack **b)
 {
 	if (stack_count(*a) <= 1)
 		return ;
@@ -43,13 +43,13 @@ void	move_ahead_b_push(int *n_move, int *store_m, t_stack **a, t_stack **b)
 	while (*n_move)
 	{
 		compute_move(rb, a, b);
-		*n_move--;
-		*store_m++;
+		(*n_move)--;
+		(*store_m)++;
 	}
 	compute_move(pa, a, b);
 }
 
-void	move_back_b(int *n_move, t_stack **a, t_stack **b)
+void	move_back_b(int n_move, t_stack **a, t_stack **b)
 {
 	if (stack_count(*b) <= 1)
 		return ;
