@@ -6,7 +6,7 @@
 /*   By: dmonfrin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/20 12:33:34 by dmonfrin      #+#    #+#                 */
-/*   Updated: 2022/08/20 12:37:40 by dmonfrin      ########   odam.nl         */
+/*   Updated: 2022/08/20 12:51:10 by dmonfrin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	move_stack_b(t_stack **a, t_stack **b, int position)
 			i++;
 		}
 	}
-	move_back_a(move_back, a, b);
+	move_back_b(move_back, a, b);
 }
 
 void	stack_ping_pong(t_stack **a, t_stack **b)
