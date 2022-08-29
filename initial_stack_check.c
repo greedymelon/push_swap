@@ -29,7 +29,7 @@ static int	is_all_digit(const char *stack)
 	int	i;
 
 	i = 0;
-	if (stack[i] == '-' && stack[i])
+	if ((stack[i] == '-' || stack[i] == '+') && stack[i])
 		i++;
 	while (stack[i])
 	{
