@@ -38,7 +38,7 @@ int	str_of_str(const char *stack, t_stack **stack_a)
 	char	**divided_stack;
 
 	divided_stack = ft_split(stack, ' ');
-	if (!divided_stack)
+	if (!divided_stack || !divided_stack[0])
 		return (0);
 	i = 0;
 	while (divided_stack[i])
