@@ -21,7 +21,8 @@ rra (reverse rotate a): Shift down all elements of stack a by 1.<br>
 The last element becomes the first one.<br>
 rrb (reverse rotate b): Shift down all elements of stack b by 1.<br>
 The last element becomes the first one.<br>
-rrr : rra and rrb at the same time.```
+rrr : rra and rrb at the same time.
+```
 
 First, it checks that the input given is a list of integer without duplicate.
 Then sort the stack and print the move necessary to sort it.
