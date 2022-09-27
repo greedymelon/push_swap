@@ -19,10 +19,7 @@ void	push(t_stack **stack_sender, t_stack **stack_target)
 	if (!*stack_sender)
 		return ;
 	first_element = *stack_sender;
-	if ((*stack_sender)->next == NULL)
-		*stack_sender = NULL;
-	else
-		(*stack_sender) = (*stack_sender)->next;
+	(*stack_sender) = (*stack_sender)->next;
 	stackadd_top(stack_target, first_element);
 }
 
